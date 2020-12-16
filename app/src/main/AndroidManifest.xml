@@ -18,6 +18,10 @@
         </activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".Register"></activity>
+        <activity android:name=".Show"></activity>
+        <activity android:name=".Writeinfo"></activity>
+        <activity android:name=".CollegeList"></activity>
+        <activity android:name=".BookList"></activity>
     </application>
 
 </manifest>
