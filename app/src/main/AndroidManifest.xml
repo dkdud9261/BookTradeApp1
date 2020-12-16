@@ -11,17 +11,20 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Writeinfo"
-            android:label="@string/title_activity_writeinfo"
+            android:label="글쓰기"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".Login">
+        <activity
+            android:name=".Login"
+            android:label="로그인">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".Register" />
+        <activity
+            android:name=".Register"
+            android:label="회원가입"/>
         <activity android:name=".CollegeList" />
         <activity android:name=".BookList" />
     </application>
