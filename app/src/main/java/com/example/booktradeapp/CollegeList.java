@@ -20,7 +20,7 @@ public class CollegeList extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list1);
-        
+
         this.initializeCollegeData();
 
         ListView listView = (ListView)findViewById(R.id.list_college);
