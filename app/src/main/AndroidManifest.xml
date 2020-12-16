@@ -10,18 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Login">
-            <intent-filter>
+           <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+               <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".Register"></activity>
-        <activity android:name=".Show"></activity>
-        <activity android:name=".Writeinfo"></activity>
-        <activity android:name=".CollegeList"></activity>
-        <activity android:name=".BookList"></activity>
+        <activity android:name=".Show"></activity>>
+        <activity android:name=".Show1"></activity>
+        <activity android:name=".show2"></activity>
     </application>
 
 </manifest>
