@@ -13,21 +13,145 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
+
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="#00BCD4"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_writeinfo" />
+    <include
+        layout="@layout/content_writeinfo"
+        android:rotationX="0" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+    <TextView
+        android:id="@+id/booktitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:text="책 제목"
+        android:textSize="15sp"
+        android:translationX="34dp"
+        android:translationY="120dp"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="120dp" />
+
+    <TextView
+        android:id="@+id/bookauthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="저자"
+        android:textSize="15sp"
+        android:translationX="34dp"
+        android:translationY="170dp"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="220dp" />
+
+    <EditText
+        android:id="@+id/editbooltitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="제목을 입력하세요."
+        android:textSize="13dp"
+        android:translationX="117dp"
+        android:translationY="109dp"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="109dp" />
+
+    <EditText
+        android:id="@+id/editbookauthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="저자를 입력하세요."
+        android:textSize="13dp"
+        android:translationX="117dp"
+        android:translationY="159dp"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="109dp" />
+
+    <TextView
+        android:id="@+id/bookprice"
+        android:layout_width="54dp"
+        android:layout_height="24dp"
+        android:text="가격"
+        android:textSize="15sp"
+        android:translationX="34dp"
+        android:translationY="218dp"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="218dp" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="153dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:inputType="number"
+        android:translationX="117dp"
+        android:translationY="215dp"
+        tools:layout_editor_absoluteX="117dp"
+        tools:layout_editor_absoluteY="206dp" />
+
+    <TextView
+        android:id="@+id/bookcondition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="책 상태"
+        android:textSize="15sp"
+        android:translationX="34dp"
+        android:translationY="328dp"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="328dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름 기입"
+        android:textSize="13sp"
+        android:translationX="100dp"
+        android:translationY="328dp"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="328dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="168dp"
+        android:layout_height="175dp"
+        android:translationX="125dp"
+        android:translationY="450dp"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="425dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/getpicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사진 가져오기"
+        android:translationX="153dp"
+        android:translationY="615dp"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="613dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CheckBox"
+        android:translationX="180dp"
+        android:translationY="328dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CheckBox"
+        android:translationX="280dp"
+        android:translationY="328dp" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
