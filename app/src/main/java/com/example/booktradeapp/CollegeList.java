@@ -20,16 +20,7 @@ public class CollegeList extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list1);
-
-        write = (Button)findViewById(R.id.btn_write);
-        write.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(CollegeList.this, Writeinfo.class);
-                startActivity(i);
-            }
-        });
-
+        
         this.initializeCollegeData();
 
         ListView listView = (ListView)findViewById(R.id.list_college);
