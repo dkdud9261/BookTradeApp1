@@ -45,7 +45,7 @@ public class Writeinfo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivity(intent);
+                startActivityForResult(intent,1);
             }
         });
     }
