@@ -1,5 +1,6 @@
 package com.example.booktradeapp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -17,15 +18,16 @@ import android.widget.ImageView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
-public class Writeinfo extends AppCompatActivity {
+public class Writeinfo extends AppCompatActivity{
     Button check;
-    Button pic = null;
-    ImageView iv = null;
+    Button pic;
+    ImageView iv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_writeinfo);
+
         setup();
         check = (Button)findViewById(R.id.completewrite);
         check.setOnClickListener(new View.OnClickListener() {
