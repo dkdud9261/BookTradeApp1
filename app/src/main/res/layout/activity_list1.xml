@@ -11,12 +11,10 @@
         android:id="@+id/list_college"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="1mm"
-        android:overScrollMode="ifContentScrolls"
-        android:scrollbars="vertical"
         android:layout_gravity="center"
-        />
-
+        android:divider="#EEEEEE"
+        android:dividerHeight="3dp"
+        android:overScrollMode="ifContentScrolls"
+        android:scrollbars="vertical" />
 
 </LinearLayout>
