@@ -80,7 +80,7 @@
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
-        android:singleLine="false"
+        android:singleLine="true"
         android:text="인문학 글쓰기"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -113,7 +113,7 @@
         android:gravity="center"
         android:text="7000원"
         android:textColor="@color/colorPrimary"
-        android:textSize="24sp"
+        android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/textView19"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.777"
@@ -129,7 +129,7 @@
         android:gravity="center"
         android:text="가격"
         android:textColor="#000000"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/show_detail"
         app:layout_constraintEnd_toStartOf="@+id/show_price"
         app:layout_constraintHorizontal_bias="1.0"
@@ -148,7 +148,6 @@
         android:text="상세 정보"
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/show_detail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/show_image" />
@@ -186,7 +185,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/show_detail" />
+        app:layout_constraintTop_toBottomOf="@+id/show_detail"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
