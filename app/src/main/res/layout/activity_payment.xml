@@ -157,7 +157,7 @@
                 android:layout_weight="1"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:text="\n* 주의사항 *\n - 결제 후 책을 수령하기시 바랍니다.\n - 7일 이내 책을 수령하지 않으면 회수됩니다." />
+                android:text="\n* 주의사항 *\n - 결제 후 책을 수령하기시 바랍니다.\n - 7일 이내 책을 수령하지 않으면 구매가 취소됩니다." />
 
         </LinearLayout>
 
