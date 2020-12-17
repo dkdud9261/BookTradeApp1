@@ -2,6 +2,8 @@ package com.example.booktradeapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,6 +17,7 @@ public class Show extends AppCompatActivity {
     ArrayList<BookData> books = Book.books;
     TextView title, author, publisher, price, detail;
     ImageView image;
+    Button button;//purchase
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,6 +33,16 @@ public class Show extends AppCompatActivity {
         price = (TextView)findViewById(R.id.show_price);
         detail = (TextView)findViewById(R.id.show_detail);
         image = (ImageView)findViewById(R.id.show_image);
+
+        button = (Button)findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Show.this, Payment.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
         title.setText(books.get(index).getTitle());
         author.setText(books.get(index).getAuthor());
