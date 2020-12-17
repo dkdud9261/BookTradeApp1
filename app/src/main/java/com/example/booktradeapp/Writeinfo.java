@@ -14,8 +14,10 @@ import androidx.appcompat.widget.Toolbar;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -32,7 +34,7 @@ public class Writeinfo extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_writeinfo);
-        setup();
+
         check = (Button)findViewById(R.id.completewrite);
         check.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
 
@@ -42,20 +44,35 @@ public class Writeinfo extends AppCompatActivity{
         publisher = (TextView)findViewById(R.id.editbookpublisher);
         detail = (TextView)findViewById(R.id.editbookdetail);
 
+        setup();
+
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 check.setBackgroundColor(Color.LTGRAY);
-                Intent i = new Intent(Writeinfo.this, NewBookList.class);
 
-                i.putExtra("title", title.getText().toString());
-                i.putExtra("author", author.getText().toString());
-                i.putExtra("price", price.getText().toString());
-                i.putExtra("publisher", publisher.getText().toString());
-                i.putExtra("detail", detail.getText().toString());
+                int len_title = title.getText().toString().getBytes().length;
+                int len_author = author.getText().toString().getBytes().length;
+                int len_price = price.getText().toString().getBytes().length;
+                int len_publisher = publisher.getText().toString().getBytes().length;
+                int len_detail = detail.getText().toString().getBytes().length;
 
-                startActivity(i);
-                finish();
+                if(len_title <= 0 || len_author <= 0 || len_price <= 0 || len_publisher <= 0 || len_detail <= 0) {
+                    Toast.makeText(Writeinfo.this, "정보를 모두 입력하세요", Toast.LENGTH_SHORT).show();
+                    check.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                }
+                else {
+                    Intent i = new Intent(Writeinfo.this, NewBookList.class);
+
+                    i.putExtra("title", title.getText().toString());
+                    i.putExtra("author", author.getText().toString());
+                    i.putExtra("price", price.getText().toString());
+                    i.putExtra("publisher", publisher.getText().toString());
+                    i.putExtra("detail", detail.getText().toString());
+
+                    startActivity(i);
+                    finish();
+                }
             }
         });
     }

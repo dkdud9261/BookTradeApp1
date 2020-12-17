@@ -3,6 +3,7 @@ package com.example.booktradeapp;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -30,8 +31,14 @@ public class BookList extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 write.setBackgroundColor(Color.LTGRAY);
-                Intent i = new Intent(BookList.this, Writeinfo.class);
-                startActivity(i);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent i = new Intent(BookList.this, Writeinfo.class);
+                        startActivity(i);
+                        write.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                    }
+                }, 100L);
             }
         });
 

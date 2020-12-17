@@ -13,7 +13,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/searchbook"
+            android:id="@+id/searchBook"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
@@ -24,7 +24,7 @@
             android:imeOptions="actionDone"
             />
         <Button
-            android:id="@+id/booksearchbt"
+            android:id="@+id/btn_search"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

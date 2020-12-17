@@ -23,10 +23,13 @@
         <activity android:name=".Register"
             android:label="회원가입"></activity>
         <activity android:name=".CollegeList"></activity>
-        <activity android:name=".BookList"></activity>
+        <activity android:name=".BookList"
+            android:label="BookList">
+        </activity>
         <activity android:name=".Writeinfo"></activity>
         <activity android:name=".Show"></activity>
-        <activity android:name=".NewBookList"></activity>
+        <activity android:name=".NewBookList"
+            android:label="NewBookList"></activity>
         <activity android:name=".Payment"></activity>
         <activity android:name=".PayComplete"></activity>
     </application>

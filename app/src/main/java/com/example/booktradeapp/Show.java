@@ -1,6 +1,7 @@
 package com.example.booktradeapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,9 +36,11 @@ public class Show extends AppCompatActivity {
         image = (ImageView)findViewById(R.id.show_image);
 
         button = (Button)findViewById(R.id.button);
+        button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                button.setBackgroundColor(Color.LTGRAY);
                 Intent i = new Intent(Show.this, Payment.class);
                 startActivity(i);
                 finish();

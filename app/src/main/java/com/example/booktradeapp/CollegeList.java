@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,11 +17,25 @@ import java.util.ArrayList;
 public class CollegeList extends AppCompatActivity {
 
     ArrayList<String> colleges;
-    Button write;
+    Button btn_search;
+    EditText search;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list1);
+
+        search = (EditText)findViewById(R.id.searchBook);
+        btn_search = (Button)findViewById(R.id.btn_search);
+        btn_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String check_search = search.getText().toString();
+                if(check_search.getBytes().length <= 0) {
+                    Toast.makeText(CollegeList.this, "책 제목을 입력하세요", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         this.initializeCollegeData();
 
