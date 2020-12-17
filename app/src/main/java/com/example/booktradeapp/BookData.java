@@ -8,7 +8,7 @@ public class BookData {
     private String detail_info;
     private String publisher;
 
-    public BookData(int photo, String title, String price, String author, String detail_info, String publisher) {
+    public BookData(int photo, String title, String author, String price, String publisher, String detail_info) {
         this.photo = photo;
         this.title = title;
         this.price = price;
