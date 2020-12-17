@@ -30,7 +30,7 @@ public class NewBookList extends AppCompatActivity {
         String publisher = i.getExtras().getString("publisher");
         String detail = i.getExtras().getString("detail");
 
-        books.add(new BookData(R.drawable.ic_launcher_background, title, author, price, publisher, detail));
+        books.add(0, new BookData(R.drawable.ic_launcher_background, title, author, price, publisher, detail));
 
         write = (Button)findViewById(R.id.btn_write);
         write.setOnClickListener(new View.OnClickListener() {
