@@ -39,23 +39,23 @@ public class BookAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View convertView, ViewGroup viewGroup) {
-        View view = mLayoutInflater.inflate(R.layout.list2_item, null);
+        //View view = mLayoutInflater.inflate(R.layout.list2_item, null);
 
-        //convertView = mLayoutInflater.inflate(R.layout.list2_item, viewGroup, false);
-        ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
-        layoutParams.height = 100;
+        convertView = mLayoutInflater.inflate(R.layout.list2_item, viewGroup, false);
+        ViewGroup.LayoutParams layoutParams = convertView.getLayoutParams();
+        layoutParams.height = 300;
         convertView.setLayoutParams(layoutParams);
 
-        ImageView photo = (ImageView)view.findViewById(R.id.photo);
-        TextView title = (TextView)view.findViewById(R.id.title);
-        TextView author = (TextView)view.findViewById(R.id.author);
-        TextView price = (TextView)view.findViewById(R.id.price);
+        ImageView photo = (ImageView)convertView.findViewById(R.id.photo);
+        TextView title = (TextView)convertView.findViewById(R.id.title);
+        TextView author = (TextView)convertView.findViewById(R.id.author);
+        TextView price = (TextView)convertView.findViewById(R.id.price);
 
         photo.setImageResource(books.get(i).getPhoto());
         title.setText(books.get(i).getTitle());
         author.setText(books.get(i).getAuthor());
         price.setText(books.get(i).getPrice()+"원");
 
-        return view;
+        return convertView;
     }
 }
