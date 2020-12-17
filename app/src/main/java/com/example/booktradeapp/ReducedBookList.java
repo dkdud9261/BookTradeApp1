@@ -1,7 +1,9 @@
 package com.example.booktradeapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -12,32 +14,36 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class NewBookList extends AppCompatActivity {
+public class ReducedBookList extends AppCompatActivity {
+
     ArrayList<BookData> books;
     Button write;
+    int index;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list2);
 
         Intent i = getIntent();
+        index = i.getExtras().getInt("index");
 
-        String title = i.getExtras().getString("title");
-        String author = i.getExtras().getString("author");
-        int price = Integer.parseInt(i.getExtras().getString("price"));
-        String publisher = i.getExtras().getString("publisher");
-        String detail = i.getExtras().getString("detail");
-
-        Book.books.add(0, new BookData(R.drawable.ic_launcher_background, title, author, price, publisher, detail));
-
+        Book.books.remove(index);
         books = Book.books;
 
         write = (Button)findViewById(R.id.btn_write);
+        write.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         write.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(NewBookList.this, Writeinfo.class);
-                startActivity(i);
+                write.setBackgroundColor(Color.LTGRAY);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent i = new Intent(ReducedBookList.this, Writeinfo.class);
+                        startActivity(i);
+                        write.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                    }
+                }, 100L);
             }
         });
 
@@ -47,7 +53,7 @@ public class NewBookList extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(NewBookList.this, Show.class);
+                Intent intent = new Intent(ReducedBookList.this, Show.class);
                 intent.putExtra("index", i);
                 startActivity(intent);
             }

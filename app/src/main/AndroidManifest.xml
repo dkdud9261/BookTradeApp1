@@ -29,9 +29,12 @@
         <activity android:name=".Writeinfo"></activity>
         <activity android:name=".Show"></activity>
         <activity android:name=".NewBookList"
-            android:label="NewBookList"></activity>
-        <activity android:name=".Payment"></activity>
+            android:label="BookList"></activity>
+        <activity android:name=".Payment"
+            android:label="결제하기"></activity>
         <activity android:name=".PayComplete"></activity>
+        <activity android:name=".ReducedBookList"
+            android:label="BookList"></activity>
     </application>
 
 </manifest>

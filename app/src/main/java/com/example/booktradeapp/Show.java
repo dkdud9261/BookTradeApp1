@@ -19,6 +19,7 @@ public class Show extends AppCompatActivity {
     TextView title, author, publisher, price, detail;
     ImageView image;
     Button button;//purchase
+    int index;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,7 +27,7 @@ public class Show extends AppCompatActivity {
         setContentView(R.layout.activity_show);
 
         Intent intent = getIntent();
-        int index = intent.getExtras().getInt("index");
+        index = intent.getExtras().getInt("index");
 
         title = (TextView)findViewById(R.id.show_title);
         author = (TextView)findViewById(R.id.show_author);
@@ -46,6 +47,7 @@ public class Show extends AppCompatActivity {
                 i.putExtra("title", title.getText().toString());
                 i.putExtra("author", author.getText().toString());
                 i.putExtra("price", price.getText().toString());
+                i.putExtra("index", index);
 
                 startActivity(i);
                 finish();

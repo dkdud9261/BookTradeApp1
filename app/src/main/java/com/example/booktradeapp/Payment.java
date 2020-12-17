@@ -17,7 +17,7 @@ public class Payment extends AppCompatActivity {
     Button button2;
     String information, price;
     TextView view_information, view_price;
-    int radioGroup;
+    int index;
     RadioButton card, account;
 
     @Override
@@ -34,6 +34,7 @@ public class Payment extends AppCompatActivity {
         Intent i = getIntent();
         information = i.getExtras().getString("title") + "(" + i.getExtras().getString("author") + ")";
         price = i.getExtras().getString("price");
+        index = i.getExtras().getInt("index");
 
         view_information.setText(information);
         view_price.setText(price);
@@ -49,6 +50,7 @@ public class Payment extends AppCompatActivity {
                 }
                 else {
                     Intent i = new Intent(Payment.this, PayComplete.class);
+                    i.putExtra("index", index);
                     startActivity(i);
                     finish();
                 }
