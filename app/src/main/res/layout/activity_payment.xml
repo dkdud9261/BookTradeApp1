@@ -156,13 +156,9 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-<<<<<<< HEAD
                 android:layout_weight="1"
                 android:text="\n* 주의사항 *\n - 결제 후 책을 수령하시기 바랍니다.\n - 계좌이체로 결제 시 다음 화면에 표시되는 계좌로 입금하시기 바랍니다.\n - 계좌이체로 결제 시 24시간 내에 입금되지 않으면 구매가 취소됩니다.\n - 7일 이내 책을 수령하지 않으면 구매가 취소됩니다."
                 android:textSize="13sp" />
-=======
-                android:text="\n* 주의사항 *\n - 결제 후 책을 수령하기시 바랍니다.\n - 7일 이내 책을 수령하지 않으면 구매가 취소됩니다." />
->>>>>>> 9c630bd3c51d8ba8bf3f25bc5f378689d1dfccb1
 
         </LinearLayout>
 
