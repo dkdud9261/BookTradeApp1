@@ -42,6 +42,11 @@ public class Show extends AppCompatActivity {
             public void onClick(View v) {
                 button.setBackgroundColor(Color.LTGRAY);
                 Intent i = new Intent(Show.this, Payment.class);
+
+                i.putExtra("title", title.getText().toString());
+                i.putExtra("author", author.getText().toString());
+                i.putExtra("price", price.getText().toString());
+
                 startActivity(i);
                 finish();
             }
