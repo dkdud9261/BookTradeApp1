@@ -26,7 +26,7 @@ public class NewBookList extends AppCompatActivity {
 
         String title = i.getExtras().getString("title");
         String author = i.getExtras().getString("author");
-        String price = i.getExtras().getString("price");
+        int price = Integer.parseInt(i.getExtras().getString("price"));
         String publisher = i.getExtras().getString("publisher");
         String detail = i.getExtras().getString("detail");
 

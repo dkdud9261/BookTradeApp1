@@ -2,6 +2,7 @@ package com.example.booktradeapp;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.View;
@@ -40,6 +41,7 @@ public class Register extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish.setBackgroundColor(Color.LTGRAY);
                 Toast.makeText(Register.this, "완료되었습니다.", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(Register.this, Login.class);
                 startActivity(i);

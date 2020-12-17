@@ -29,7 +29,6 @@ public class BookList extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(BookList.this, Writeinfo.class);
                 startActivity(i);
-                finish();
             }
         });
 

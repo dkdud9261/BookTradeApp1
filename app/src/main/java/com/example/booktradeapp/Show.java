@@ -34,7 +34,7 @@ public class Show extends AppCompatActivity {
         title.setText(books.get(index).getTitle());
         author.setText(books.get(index).getAuthor());
         publisher.setText(books.get(index).getPublisher());
-        price.setText(books.get(index).getPrice());
+        price.setText(books.get(index).getPrice()+"원");
         detail.setText(books.get(index).getDetail_info());
         image.setImageResource(books.get(index).getPhoto());
 

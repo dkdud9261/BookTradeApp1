@@ -1,6 +1,7 @@
 package com.example.booktradeapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -20,9 +21,11 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         register = findViewById(R.id.btn_register);
+        register.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                register.setBackgroundColor(Color.LTGRAY);
                 Intent i = new Intent(Login.this, Register.class);
                 startActivity(i);
             }
@@ -32,6 +35,7 @@ public class Login extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                login.setBackgroundColor(Color.LTGRAY);
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {

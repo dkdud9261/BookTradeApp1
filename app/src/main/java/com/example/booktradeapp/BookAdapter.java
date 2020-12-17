@@ -43,11 +43,13 @@ public class BookAdapter extends BaseAdapter {
 
         ImageView photo = (ImageView)view.findViewById(R.id.photo);
         TextView title = (TextView)view.findViewById(R.id.title);
+        TextView author = (TextView)view.findViewById(R.id.author);
         TextView price = (TextView)view.findViewById(R.id.price);
 
         photo.setImageResource(books.get(i).getPhoto());
         title.setText(books.get(i).getTitle());
-        price.setText(books.get(i).getPrice());
+        author.setText(books.get(i).getAuthor());
+        price.setText(books.get(i).getPrice()+"원");
 
         return view;
     }

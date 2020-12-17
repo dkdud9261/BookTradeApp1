@@ -3,12 +3,12 @@ package com.example.booktradeapp;
 public class BookData {
     private int photo;
     private String title;
-    private String price;
+    private int price;
     private String author;
     private String detail_info;
     private String publisher;
 
-    public BookData(int photo, String title, String author, String price, String publisher, String detail_info) {
+    public BookData(int photo, String title, String author, int price, String publisher, String detail_info) {
         this.photo = photo;
         this.title = title;
         this.price = price;
@@ -25,7 +25,7 @@ public class BookData {
         return this.title;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return this.price;
     }
 
@@ -49,7 +49,7 @@ public class BookData {
         this.title = title;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
