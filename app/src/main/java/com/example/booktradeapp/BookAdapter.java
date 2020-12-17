@@ -41,6 +41,11 @@ public class BookAdapter extends BaseAdapter {
     public View getView(int i, View convertView, ViewGroup viewGroup) {
         View view = mLayoutInflater.inflate(R.layout.list2_item, null);
 
+        //convertView = mLayoutInflater.inflate(R.layout.list2_item, viewGroup, false);
+        ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
+        layoutParams.height = 100;
+        convertView.setLayoutParams(layoutParams);
+
         ImageView photo = (ImageView)view.findViewById(R.id.photo);
         TextView title = (TextView)view.findViewById(R.id.title);
         TextView author = (TextView)view.findViewById(R.id.author);
