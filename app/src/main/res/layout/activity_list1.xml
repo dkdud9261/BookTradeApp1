@@ -6,7 +6,37 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".CollegeList">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
+        <EditText
+            android:id="@+id/searchbook"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="검색어를 입력하세요."
+            android:textSize="13dp"
+            />
+        <Button
+            android:id="@+id/booksearchbt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="5dp"
+            android:text="검색" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:orientation="horizontal">
     <ListView
         android:id="@+id/list_college"
         android:layout_width="match_parent"
@@ -15,6 +45,9 @@
         android:divider="#EEEEEE"
         android:dividerHeight="3dp"
         android:overScrollMode="ifContentScrolls"
-        android:scrollbars="vertical" />
+        android:scrollbars="vertical" >
+    </ListView>
+    </LinearLayout>
+
 
 </LinearLayout>
