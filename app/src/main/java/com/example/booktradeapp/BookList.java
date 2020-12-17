@@ -1,6 +1,7 @@
 package com.example.booktradeapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,9 +25,11 @@ public class BookList extends AppCompatActivity {
         books = Book.books;
 
         write = (Button)findViewById(R.id.btn_write);
+        write.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         write.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                write.setBackgroundColor(Color.LTGRAY);
                 Intent i = new Intent(BookList.this, Writeinfo.class);
                 startActivity(i);
             }

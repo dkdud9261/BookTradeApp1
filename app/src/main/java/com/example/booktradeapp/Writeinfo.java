@@ -2,6 +2,7 @@ package com.example.booktradeapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 //import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -33,6 +34,7 @@ public class Writeinfo extends AppCompatActivity{
         setContentView(R.layout.activity_writeinfo);
         setup();
         check = (Button)findViewById(R.id.completewrite);
+        check.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
 
         title = (TextView)findViewById(R.id.editbooktitle);
         author = (TextView)findViewById(R.id.editbookauthor);
@@ -43,6 +45,7 @@ public class Writeinfo extends AppCompatActivity{
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                check.setBackgroundColor(Color.LTGRAY);
                 Intent i = new Intent(Writeinfo.this, NewBookList.class);
 
                 i.putExtra("title", title.getText().toString());
