@@ -27,7 +27,6 @@ public class Writeinfo extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_writeinfo);
-
         setup();
         check = (Button)findViewById(R.id.completewrite);
         check.setOnClickListener(new View.OnClickListener() {
@@ -39,15 +38,14 @@ public class Writeinfo extends AppCompatActivity{
             }
         });
     }
-    private void setup()
-    {
-        pic = (Button)findViewById(R.id.getpicture);
-        iv = (ImageView)findViewById(R.id.bookimage);
+    private void setup() {
+        pic = (Button) findViewById(R.id.getpicture);
+        iv = (ImageView) findViewById(R.id.bookimage);
         pic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent,1);
+                startActivityForResult(intent, 1);
             }
         });
     }
