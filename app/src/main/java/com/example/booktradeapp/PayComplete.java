@@ -8,19 +8,20 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Payment extends AppCompatActivity {
-    Button button2;
+public class PayComplete extends AppCompatActivity {
+
+    Button okaybtn;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payment);
+        setContentView(R.layout.activity_paycomplete);
 
-        button2 = (Button)findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
+        okaybtn = (Button)findViewById(R.id.okaybtn);
+        okaybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Payment.this, PayComplete.class);
+                Intent i = new Intent(PayComplete.this, BookList.class);
                 startActivity(i);
                 finish();
             }

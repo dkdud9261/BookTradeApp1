@@ -28,6 +28,7 @@
         <activity android:name=".Show"></activity>
         <activity android:name=".NewBookList"></activity>
         <activity android:name=".Payment"></activity>
+        <activity android:name=".PayComplete"></activity>
     </application>
 
 </manifest>
